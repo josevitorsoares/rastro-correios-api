@@ -1,0 +1,54 @@
+{
+  "name": "rastro-correios",
+  "version": "1.0.0",
+  "description": "📦 Rastro Correios is a Node.js library for tracking objects posted at the Brazilian Post Office. Check the status of parcels simply and without authentication.",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "tsx watch server.ts",
+    "lint": "eslint . --ext js,ts --fix",
+    "lint:fix": "pn lint --write --fix"
+  },
+  "keywords": [
+    "entrega",
+    "entregas",
+    "correio",
+    "correios",
+    "rastreio",
+    "rastrear",
+    "encomendas",
+    "encomenda",
+    "correios-api",
+    "rastreio de pacotes",
+    "rastreamento",
+    "sro"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josevitorsoares/rastro-correios.git"
+  },
+  "author": "José Vitor Soares <josevitorgoncalvessoares@gmail.com>",
+  "license": "Apache License 2.0",
+  "packageManager": "pnpm@10.7.1",
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/node": "^22.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.29.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.2",
+    "puppeteer": "^24.6.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "zod": "^3.24.2"
+  }
+}
