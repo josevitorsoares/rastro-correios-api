@@ -1,3 +1,4 @@
+import { TrackingError } from '@errors/tracking.error';
 import fastify from 'fastify';
 import { ZodError } from 'zod';
 
@@ -11,6 +12,14 @@ app.setErrorHandler((error, _, reply) => {
       error: error.format(),
     });
   }
+
+  if (error instanceof TrackingError) {
+    return reply.status(400).send({
+      message: error.message,
+      error: error.note,
+    });
+  }
+
   return reply.status(500).send({
     message: 'Internal Server Error',
     error: error.message,
