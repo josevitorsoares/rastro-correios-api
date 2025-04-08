@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [".eslintrc.cjs", "**/*spec.ts"]
+}
