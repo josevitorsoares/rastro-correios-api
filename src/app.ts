@@ -1,8 +1,12 @@
 import { TrackingError } from '@errors/tracking.error';
+import { trackRoutes } from '@routers/track.routes';
 import fastify from 'fastify';
 import { ZodError } from 'zod';
 
 export const app = fastify();
+
+// Define the routes
+app.register(trackRoutes);
 
 // Define the error handler
 app.setErrorHandler((error, _, reply) => {
