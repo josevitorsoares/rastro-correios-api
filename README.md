@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/license-APACHE--2.0-blue)
 ![Node.js](https://img.shields.io/badge/Node.js-18.x-blue)
 
-![rastro-correios](https://i.postimg.cc/C5rQfdKZ/rastro-correios-api.png)
+![rastro-correios](https://i.postimg.cc/BZ7bxwgr/rastro-correios-api.png)
 
 **Rastro Correios** é uma API feita com [Node.js](https://nodejs.org) que permite rastrear objetos dos [Correios do Brasil](https://www.correios.com.br) de forma simples, rápida e sem autenticação. Ideal para integrar em sistemas logísticos, e-commerces, bots ou qualquer aplicação que precise acompanhar o status de entregas.
 
