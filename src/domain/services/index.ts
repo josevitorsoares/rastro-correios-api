@@ -1,1 +1,1 @@
-export * from './scraping.interface.service';
+export * from './http-client.service.interface'
