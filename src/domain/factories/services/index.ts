@@ -1,1 +1,1 @@
-export * from './puppeteer-scraping.service.factory';
+export * from './axios-http-client.service.factory';
