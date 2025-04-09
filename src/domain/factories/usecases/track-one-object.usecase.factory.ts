@@ -1,11 +1,11 @@
 import { ITrackOneObjectUseCase } from '@domain/usecases/track-one-object.usecase.interface';
+import { makeTrackService } from '@factories/services';
 import { TrackOneObjectUseCase } from '@usecases/track-one-object.usecase';
-import { makePuppeteerScrapingService } from '../services';
 
 export const makeTrackOneObjectUseCase = (): ITrackOneObjectUseCase => {
-  const scrapingService = makePuppeteerScrapingService();
+  const trackService = makeTrackService();
 
-  const trackOneObject = new TrackOneObjectUseCase(scrapingService);
+  const trackOneObject = new TrackOneObjectUseCase(trackService);
 
   return trackOneObject;
 };

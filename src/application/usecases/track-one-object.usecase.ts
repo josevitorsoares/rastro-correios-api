@@ -1,4 +1,4 @@
-import { IScrapingService } from '@domain/services/scraping.interface.service';
+import { ITrackService } from '@domain/services/track.service.interface';
 import { ITrackOneObjectUseCase } from '@domain/usecases/track-one-object.usecase.interface';
 import {
   TrackOneObjectInput,
@@ -6,13 +6,12 @@ import {
 } from '@dtos/track-one-object.dto';
 
 export class TrackOneObjectUseCase implements ITrackOneObjectUseCase {
-  constructor(private readonly _scrapingService: IScrapingService) {}
-  async execute(
-    input: TrackOneObjectInput,
-  ): Promise<TrackOneObjectOutput> {
+  constructor(private readonly _trackService: ITrackService) {}
+
+  async execute(input: TrackOneObjectInput): Promise<TrackOneObjectOutput> {
     const { code } = input;
 
-    const tracking = await this._scrapingService.trackOneObject(code);
+    const tracking = await this._trackService.trackObject(code);
 
     return tracking;
   }
