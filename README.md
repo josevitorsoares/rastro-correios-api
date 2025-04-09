@@ -4,16 +4,13 @@
 ![License](https://img.shields.io/badge/license-APACHE--2.0-blue)
 ![Node.js](https://img.shields.io/badge/Node.js-18.x-blue)
 
-![rastro-correios](https://i.postimg.cc/DZ4JsZ7S/rastro-correios.png)
+![rastro-correios](https://i.postimg.cc/C5rQfdKZ/rastro-correios-api.png)
 
-**Rastro Correios** é uma API feita com [Node.js](https://nodejs.org) que permite rastrear objetos dos [Correios do Brasil](https://www.correios.com.br) de forma simples, rápida e sem autenticação.  
-Ideal para integrar em sistemas logísticos, e-commerces, bots ou qualquer aplicação que precise acompanhar o status de entregas.
+**Rastro Correios** é uma API feita com [Node.js](https://nodejs.org) que permite rastrear objetos dos [Correios do Brasil](https://www.correios.com.br) de forma simples, rápida e sem autenticação. Ideal para integrar em sistemas logísticos, e-commerces, bots ou qualquer aplicação que precise acompanhar o status de entregas.
 
 ---
 
 ## ⚙️ Instalação
-
-Antes de tudo, crie um arquivo `.env` na raiz do projeto com as variáveis do arquivo [`.env.example`](./.env.example).
 
 ```bash
 # Clone o repositório
@@ -21,7 +18,11 @@ git clone https://github.com/josevitorsoares/rastro-correios.git
 
 # Acesse a pasta
 cd rastro-correios
+```
 
+Após isso, crie um arquivo `.env` na raiz da pasta do projeto com as variáveis do arquivo [`.env.example`](./.env.example).
+
+```bash
 # Instale as dependências
 pnpm install
 
