@@ -40,6 +40,7 @@
       "@factories/*": ["src/domain/factories/*"],
       "@usecases/*": ["src/application/usecases/*"],
       "@domain/services/*": ["src/domain/services/*"],
+      "@domain/types/*": ["src/domain/types/*"],
       "@services/*": ["src/infrastructure/services/*"],
       "@presenters/*": ["src/presentation/presenters/*"],
       "@controllers/*": ["src/presentation/controllers/*"],
