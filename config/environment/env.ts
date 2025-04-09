@@ -17,7 +17,7 @@ if (result.error) {
 
 const envSchema = z.object({
   API_PORT: z.coerce.number().default(3333),
-  TRACKING_URL: z.string().url(),
+  EXTERNAL_API: z.string().url(),
 });
 
 const env = envSchema.parse(process.env, {
@@ -26,6 +26,6 @@ const env = envSchema.parse(process.env, {
   }),
 });
 
-const { API_PORT, TRACKING_URL } = env;
+const { API_PORT, EXTERNAL_API } = env;
 
-export { API_PORT, TRACKING_URL };
+export { API_PORT, EXTERNAL_API };
