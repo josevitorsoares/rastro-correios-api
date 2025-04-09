@@ -1,6 +1,6 @@
-# 📦 Rastro Correios - v0.1
+# 📦 Rastro Correios - v1.0.0
 
-![Version](https://img.shields.io/badge/version-0.1-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-APACHE--2.0-blue)
 ![Node.js](https://img.shields.io/badge/Node.js-18.x-blue)
 
@@ -57,7 +57,7 @@ GET http://localhost:3333/track/PO123456789BR
     {
       "description": "Objeto entregue ao destinatário",
       "status": "delivered",
-      "origin": "Unidade Tratamento São Paulo, SP",
+      "origin": "Agência Dos Correios FORTALEZA, CE",
       "date": "25/02/25",
       "time": "10:02",
       "message": ""
@@ -65,16 +65,23 @@ GET http://localhost:3333/track/PO123456789BR
     {
       "description": "Objeto saiu para entrega ao destinatário",
       "status": "delivery_route",
-      "origin": "Unidade Tratamento São Paulo, SP",
+      "origin": "Agência Dos Correios FORTALEZA, CE",
       "date": "25/02/25",
       "time": "09:34",
-      "message": "É preciso ter alguém no endereço para receber o carteiro"
     },
     {
       "description": "Objeto em transferência - por favor aguarde",
       "status": "in_transit",
-      "origin": "Agência Dos Correios São Paulo, SP",
-      "destination": "Unidade Tratamento São Paulo, SP",
+      "origin": "Unidade de Tratamento FORTALEZA, CE",
+      "destination": "Agência Dos Correios FORTALEZA, CE",
+      "date": "18/03/2025",
+      "time": "13:43:20"
+    },
+    {
+      "description": "Objeto em transferência - por favor aguarde",
+      "status": "in_transit",
+      "origin": "Agência Dos Correios SAO PAULO, SP",
+      "destination": "Unidade Tratamento SAO PAULO, SP",
       "date": "21/02/25",
       "time": "16:25"
     },
@@ -95,7 +102,6 @@ GET http://localhost:3333/track/PO123456789BR
 
 - [Node.js](https://nodejs.org) — Servidor leve e eficiente
 - [TypeScript](https://www.typescriptlang.org) — Tipagem estática para maior segurança
-- [Puppeteer](https://pptr.dev) — Web scraping headless do site dos Correios
 - [Fastify](https://www.fastify.io) — Framework rápido para APIs RESTful
 - [dotenv](https://github.com/motdotla/dotenv) — Gerenciamento de variáveis de ambiente
 
@@ -104,16 +110,8 @@ GET http://localhost:3333/track/PO123456789BR
 ## ✨ Funcionalidades
 
 - 📮 Consulta de rastreamento por código dos Correios
-- 🤖 Extração automatizada de dados via web scraping
 - 🔒 Resposta estruturada em JSON
 - ⚠️ Tratamento de erros e instabilidades
-
----
-
-## ⚠️ Avisos
-
-- A API utiliza web scraping no site oficial dos Correios.
-- Pode haver instabilidades caso o layout ou estrutura do site seja alterado.
 
 ---
 

@@ -2,11 +2,14 @@
   "name": "rastro-correios",
   "version": "1.0.0",
   "description": "📦 Rastro Correios is a Node.js library for tracking objects posted at the Brazilian Post Office. Check the status of parcels simply and without authentication.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "start:dev": "tsx watch server.ts",
+    "dev": "tsx watch server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
     "lint": "eslint . --ext js,ts --fix",
-    "lint:fix": "pn lint --write --fix"
+    "format": "prettier --write ."
   },
   "keywords": [
     "entrega",
@@ -44,11 +47,9 @@
     "typescript-eslint": "^8.29.0"
   },
   "dependencies": {
+    "axios": "^1.8.4",
     "dotenv": "^16.4.7",
     "fastify": "^5.2.2",
-    "puppeteer": "^24.6.0",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "zod": "^3.24.2"
   }
 }
