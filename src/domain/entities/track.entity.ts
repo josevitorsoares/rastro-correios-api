@@ -10,9 +10,6 @@ export type TrackEntity = {
   /** Status of the event (e.g. “In transit”). */
   status: TrackStatusEnum;
 
-  /** Optional message with additional information about the event. */
-  message?: string;
-
   /** Origin location of the event (e.g. “Treatment Unit in São Paulo, SP”). */
   origin: string;
 
