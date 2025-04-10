@@ -1,23 +1,27 @@
 import { TrackEntity } from '@entities/track.entity';
+import { TrackDescriptionEnum } from '@enums/track-description.enum';
 import { TrackStatusEnum } from '@enums/track-status.enum';
 
 type ShipmentCheckpoint = {
   date: string;
-  description: string;
+  description: TrackDescriptionEnum;
   local: { city: string; state: string; localName: string };
   destination?: { city: string; state: string; localName: string };
 };
 
 export class TrackMapper {
-  private _getStatus(description: string): TrackStatusEnum {
+  private _getStatus(description: TrackDescriptionEnum): TrackStatusEnum {
     switch (description) {
-      case 'Objeto postado':
+      case TrackDescriptionEnum.OBJECT_POSTED:
         return TrackStatusEnum.POSTED;
-      case 'Objeto saiu para entrega ao destinatário':
+
+      case TrackDescriptionEnum.OBJECT_DELIVERY_ROUTE:
         return TrackStatusEnum.DELIVERY_ROUTE;
-      case 'Objeto entregue ao destinatário':
+
+      case TrackDescriptionEnum.OBJECT_DELIVERED:
         return TrackStatusEnum.DELIVERED;
-      default:
+
+      case TrackDescriptionEnum.OBJECT_IN_TRANSIT:
         return TrackStatusEnum.IN_TRANSIT;
     }
   }
@@ -35,7 +39,7 @@ export class TrackMapper {
     const newDate = new Date(date);
 
     track.description = description;
-    track.status = this.prototype._getStatus(track.description);
+    track.status = this.prototype._getStatus(description);
 
     track.origin = `${localName} ${city}, ${state}`;
 
