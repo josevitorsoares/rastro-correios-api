@@ -61,7 +61,6 @@ GET http://localhost:3333/track/PO123456789BR
       "origin": "Agência Dos Correios FORTALEZA, CE",
       "date": "25/02/25",
       "time": "10:02",
-      "message": ""
     },
     {
       "description": "Objeto saiu para entrega ao destinatário",
