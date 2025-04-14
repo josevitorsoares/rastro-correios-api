@@ -18,7 +18,7 @@ app.setErrorHandler((error, _, reply) => {
   }
 
   if (error instanceof TrackingError) {
-    return reply.status(400).send({
+    return reply.status(404).send({
       message: error.message,
       error: error.note,
     });
